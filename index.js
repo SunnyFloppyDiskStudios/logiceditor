@@ -1,5 +1,5 @@
 // date UI
-const dateText = document.getElementById("dateTimeUI");
+const dateText = document.getElementById("ui_dateTimeUI");
 
 function updateTimeText() {
     const date = new Date();
@@ -21,7 +21,7 @@ updateTimeText();
 setInterval(updateTimeText, 3000);
 
 // name editor
-const nameText = document.getElementById("schemaName");
+const nameText = document.getElementById("ui_schemaName");
 
 nameText.addEventListener("click", () => {
     nameText.setAttribute("contenteditable", "true");
