@@ -24,6 +24,10 @@
 </head>
 <body>
 <div class="page-wrapper">
+    <div class="canvas-wrapper">
+        <p>hi</p>
+    </div>
+
     <div class="sidebar">
         <div class="items-search">
             <label for="searchbox"></label><input id="searchbox" class="textbox" type="search" autocapitalize="no" autocomplete="no" placeholder="find stuff...">
@@ -35,11 +39,26 @@
         </div>
 
     </div>
-    <div class="navbar">
-        <p>hi</p>
+
+    <div class="bottom-bar">
+        <div class="button-bar">
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+        </div>
+
+        <div class="info-bar">
+            <p style="font-size: 10px; font-weight: lighter">FLOPIC EDITOR</p>
+            <p id="dateTimeUI" style="font-size: 15px; font-weight: lighter">XX/XX/XXXX • XX:XXLM</p>
+            <p id="schemaName" style="font-size: 30px; font-weight: bold">SCHEMA NAME</p>
+        </div>
     </div>
-    <canvas id="editor"></canvas>
 </div>
+
+<div id="ss-warning">
+    <p>This site is not optimised for tiny screens like yours. Please open the editor on a larger screen to gain editing abilities. If you enlarge your window size and this warning does not dissapear, please reload the page. This warning may be removed in future version.</p>
+</div>
+
 </body>
 <script src="index.js"></script>
 </html>
