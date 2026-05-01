@@ -275,3 +275,7 @@ h1 a:hover {
         display: initial;
     }
 }
+
+.editor {
+    background-color: var(--bpblue);
+}
