@@ -146,7 +146,7 @@ h1 a:hover {
     height: 100%;
     box-sizing: border-box;
     z-index: 9999;
-    border-right: 5px solid white;
+    /*border-right: 5px solid white;*/
     backdrop-filter: blur(10px);
     overflow-y: scroll
 }
@@ -169,6 +169,12 @@ h1 a:hover {
     text-align: left;
     color: white;
     font-family: Rubik, sans-serif;
+}
+
+.items-search h1:hover {
+    background-color: var(--transparent);
+    transition: background-color 0.3s var(--curve);
+    cursor: pointer;
 }
 
 .items-title {
@@ -200,7 +206,6 @@ h1 a:hover {
 }
 
 .item img {
-    width: 60px;
     height: 60px;
 
     user-drag: none;
@@ -209,6 +214,13 @@ h1 a:hover {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+.item-img-container {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
 }
 
 .item p {
@@ -321,8 +333,49 @@ h1 a:hover {
     position: absolute;
     margin: 0;
     padding: 0;
+    display: block;
+
+    top:0;
+    left: 0;
+
+    width: fit-content;
+    height: fit-content;
 }
 
 .block img {
     max-block-size: 100px;
+    display: block;
+}
+
+.wire-clickzone {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: var(--transparent);
+}
+
+.inputs {
+    top: 0;
+    left: -5px;
+
+    position: absolute;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.outputs {
+    top: 0;
+    right: -5px;
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }

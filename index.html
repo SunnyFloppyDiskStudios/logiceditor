@@ -19,21 +19,29 @@
     <div id="canvas">
         <div class="canvas-bg"></div>
 
-        <div class="block" style="right: 50px; top: 50px">
-            <img src="objects/items_debug_thing/items_debug_thing.png" alt="FLOPIC Editor">
+        <div class="block" style="transform: translate(300px, 30px)">
+            <img src="objects/items_and/items_and.png" alt="AND">
+            <div class="inputs">
+                <div class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
+                <div class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
+            </div>
 
+            <div class="outputs">
+                <div class="wire-clickzone wire-out" style="transform: translate(0px,0px)"></div>
+            </div>
         </div>
 
     </div>
-    <div class="sidebar">
+    <div class="sidebar" id="ui_sidebar">
         <div class="items-search">
             <label for="ui_searchbox"></label><input id="ui_searchbox" class="textbox" type="search" autocapitalize="none" autocomplete="no" placeholder="find stuff...">
+            <h1 style="font-size: 25px; margin: 0" id="ui_hide-side"><</h1>
         </div>
 
         <div>
             <div class="items-title"><h3>SECTION 1</h3></div>
             <div class="items-container">
-                <div id="items_debug_thing" class="item"><img src="assets/images/site/favicon.png"><p>DEBUG ITEM</p></div>
+                <div id="items_and" class="item"><div class="item-img-container"><img src="/objects/items_and/items_and.png"></div><p>AND</p></div>
             </div>
         </div>
     </div>
