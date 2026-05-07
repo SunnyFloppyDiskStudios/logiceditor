@@ -355,6 +355,8 @@ h1 a:hover {
 
     width: fit-content;
     height: fit-content;
+
+    z-index: 10;
 }
 
 .block img {
@@ -367,11 +369,17 @@ h1 a:hover {
     width: 30px;
     height: 30px;
     background-color: var(--transparent);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 11;
 }
 
 .inputs {
     top: 0;
-    left: -5px;
+    left: -10px;
 
     position: absolute;
 
@@ -384,7 +392,7 @@ h1 a:hover {
 
 .outputs {
     top: 0;
-    right: -5px;
+    right: -10px;
 
     position: absolute;
 
@@ -394,3 +402,36 @@ h1 a:hover {
     justify-content: center;
     height: 100%;
 }
+
+.wire-head {
+    width: 10px;
+    height: 10px;
+    background-color: var(--red);
+    position: absolute;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+}
+
+.wire-segment {
+    /*width: 100px;*/
+    height: 10px;
+
+    flex-shrink: 0;
+    display: flex;
+
+    background-color: var(--red);
+    border-radius: 10px;
+    transform-origin: 5px 5px;
+
+    align-items: center;
+    justify-content: end;
+
+    /*transform: rotate(45deg);*/
+
+    pointer-events: none;
+}
+
