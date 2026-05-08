@@ -14,40 +14,32 @@
     <title>FLOPIC Editor</title>
     <link rel="icon" type="image/png" href="assets/images/site/favicon.png">
 </head>
-<body>
+<body oncontextmenu="return false">
 <div class="page-wrapper">
     <div id="canvas">
         <div class="canvas-bg"></div>
 
-        <div class="block" style="transform: translate(300px, 30px)">
+        <div id="1" class="block" style="transform: translate(300px, 30px)">
             <img src="objects/items_and/items_and.png" alt="AND">
             <div class="inputs">
-                <div class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
-                <div class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
+                <div id="1-1" class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
+                <div id="1-2" class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
             </div>
 
             <div class="outputs">
-                <div class="wire-clickzone wire-out" style="transform: translate(0px,0px)"></div>
+                <div id="1-3" class="wire-clickzone wire-out" style="transform: translate(0px,0px)"></div>
             </div>
         </div>
 
-        <div class="block" style="transform: translate(500px, 50px)">
+        <div id="2" class="block" style="transform: translate(500px, 50px)">
             <img src="objects/items_and/items_and.png" alt="AND">
             <div class="inputs">
-                <div class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
-                <div class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
+                <div id="2-1" class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
+                <div id="2-2" class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
             </div>
 
             <div class="outputs">
-                <div class="wire-clickzone wire-out" style="transform: translate(0px,0px)">
-                    <div class="wire-head">
-                        <div class="wire-segment" style="width: 100px; transform: rotate(45deg);">
-                            <div class="wire-head">
-                                <div class="wire-segment" style="width: 50px; transform: rotate(15deg);"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div id="2-3" class="wire-clickzone wire-out" style="transform: translate(0px,0px)"></div>
             </div>
         </div>
 

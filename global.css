@@ -8,6 +8,7 @@
     --nearBlack: #00122c;
 
     --transparent: #ffffff55;
+    --darktransparent: #00000055;
 
     --bpblue: #3963ff;
     --bplightgreen: #6ba470;
@@ -20,6 +21,28 @@
     --bpblack: #000;
     --bpgrey: #a0a0a0;
     --bpdarkorange: #742400;
+
+    --wred: #ea3030;
+    --worange: #de742e;
+    --wyellow: #e3d253;
+    --wgreen: #44c548;
+    --wblue: #4d88da;
+    --wcyan: #43cfc3;
+    --wpink: #ef61d0;
+    --wpurple: #7c3dc3;
+    --wwhite: #cfcfcf;
+    --wblack: #000000;
+
+    --wdarkred: #9c2020;
+    --wdarkorange: #8d481d;
+    --wdarkyellow: #877c31;
+    --wdarkgreen: #226223;
+    --wdarkblue: #26446c;
+    --wdarkcyan: #20635c;
+    --wdarkpink: #843573;
+    --wdarkpurple: #3f1f64;
+    --wdarkwhite: #707070;
+    --wdarkblack: #1a1a1a;
 
     --curve: cubic-bezier(.24,1.19,.43,1.654);
 }
@@ -232,7 +255,6 @@ h1 a:hover {
     height: calc(100vh - 70px);
     border: 5px solid white;
     position: relative;
-    cursor: grab;
     overflow: hidden;
 }
 
@@ -368,13 +390,18 @@ h1 a:hover {
     cursor: pointer;
     width: 30px;
     height: 30px;
-    background-color: var(--transparent);
+    transition: background-color 0.3s var(--curve);
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     z-index: 11;
+}
+
+.wire-clickzone:hover {
+    background-color: var(--transparent);
+    transition: background-color 0.3s var(--curve);
 }
 
 .inputs {
@@ -404,9 +431,8 @@ h1 a:hover {
 }
 
 .wire-head {
-    width: 10px;
-    height: 10px;
-    background-color: var(--red);
+    width: 6px;
+    height: 6px;
     position: absolute;
 
     border-radius: 10px;
@@ -414,18 +440,23 @@ h1 a:hover {
     display: flex;
     align-items: center;
     /*justify-content: center;*/
+
+    /*background-color: var(--wred);*/
+
+    z-index: 50;
 }
 
 .wire-segment {
     /*width: 100px;*/
-    height: 10px;
+    height: 6px;
 
     flex-shrink: 0;
     display: flex;
 
-    background-color: var(--red);
+    background-color: var(--wred);
+    border: 1px solid var(--darktransparent);
     border-radius: 10px;
-    transform-origin: 5px 5px;
+    transform-origin: 3px 50%;
 
     align-items: center;
     justify-content: end;
@@ -433,5 +464,5 @@ h1 a:hover {
     /*transform: rotate(45deg);*/
 
     pointer-events: none;
+    z-index: 45;
 }
-
