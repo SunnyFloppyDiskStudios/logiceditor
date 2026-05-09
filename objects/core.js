@@ -59,9 +59,10 @@ function appendWire(parent, oHead) {
 
         // wire
         const oHeadRect = oHead.getBoundingClientRect();
+        const nHeadRect = nHead.getBoundingClientRect();
 
-        const x = e.clientX - (oHeadRect.left + oHeadRect.width / 2);
-        const y = e.clientY - (oHeadRect.top + oHeadRect.height / 2);
+        const x = (nHeadRect.left + nHeadRect.width / 2) - (oHeadRect.left + oHeadRect.width / 2);
+        const y = (nHeadRect.top + nHeadRect.height / 2) - (oHeadRect.top + oHeadRect.height / 2);
 
         const dist = Math.hypot(x, y);
         const angle = Math.atan2(y, x) * (180 / Math.PI);
