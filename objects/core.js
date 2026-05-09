@@ -67,7 +67,7 @@ function appendWire(parent, oHead) {
         const dist = Math.hypot(x, y);
         const angle = Math.atan2(y, x) * (180 / Math.PI);
 
-        nWire.style.width = `${dist}px`;
+        nWire.style.width = `${dist + 5}px`;
         nWire.style.transform = `rotate(${angle}deg)`;
     }
 
@@ -76,7 +76,7 @@ function appendWire(parent, oHead) {
     function finishWire(e) {
         console.log("doing something");
 
-        if (e.target.classList.contains("wire-out")) {
+        if (e.target.classList.contains("wire-out") || e.target.id.toString().split("-")[0] === parent.id.toString().split("-")[0]) {
             // do nothing! (unironically does something)
             setTimeout(() => { document.addEventListener('click', finishWire, { once: true }); }, 0);
         } else if (e.target.classList.contains("wire-in")) {
