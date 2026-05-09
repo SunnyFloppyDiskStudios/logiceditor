@@ -13,13 +13,14 @@
 
     <title>FLOPIC Editor</title>
     <link rel="icon" type="image/png" href="assets/images/site/favicon.png">
+    <script src="objects/items_and/items_and.js"></script>
 </head>
 <body oncontextmenu="return false">
 <div class="page-wrapper">
     <div id="canvas">
         <div class="canvas-bg"></div>
 
-        <div id="1" class="block" style="transform: translate(300px, 30px)">
+        <div id="1" class="block AND" style="transform: translate(300px, 30px)">
             <img src="objects/items_and/items_and.png" alt="AND" draggable="false">
             <div class="inputs">
                 <div id="1-1" class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
@@ -31,7 +32,7 @@
             </div>
         </div>
 
-        <div id="2" class="block" style="transform: translate(500px, 50px)">
+        <div id="2" class="block AND" style="transform: translate(500px, 50px)">
             <img src="objects/items_and/items_and.png" alt="AND" draggable="false">
             <div class="inputs">
                 <div id="2-1" class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
@@ -83,5 +84,5 @@
 
 </body>
 <script src="scripts/index.js"></script>
-<script src="objects/core.js"></script>
+<script src="objects/wiring.js"></script>
 </html>

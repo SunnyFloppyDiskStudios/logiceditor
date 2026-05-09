@@ -8,8 +8,8 @@ this script makes me want to EXPLODE
 
 
 // global variables
-var wiringMode;
-var lastGivenID = 2; // ID SYSTEM is OBJECT - IO i.e. AND is "1", wirespots are "1-1" "1-2" "1-3". Increments when new objects are created
+export var wiringMode;
+export var lastGivenID = 2; // ID SYSTEM is OBJECT - IO i.e. AND is "1", wirespots are "1-1" "1-2" "1-3". Increments when new objects are created
 
 // initialise click zones (does not cover new objects fix later)
 var clickZones = document.getElementsByClassName("wire-clickzone");
@@ -94,3 +94,11 @@ function appendWire(parent, oHead) {
 }
 
 // there was once pythagoras theroem here :sob: but i deleted it :sob: because :sob: it was USELESS :sob:
+
+
+/*
+implenentation
+
+if id 1-3 connects with 2-2 then it creates a variable with
+
+ */
