@@ -206,6 +206,8 @@ h1 a:hover {
     text-align: left;
     color: white;
     font-family: Rubik, sans-serif;
+    pointer-events: none;
+    user-select: none;
 }
 
 .items-container {
