@@ -1,21 +1,23 @@
-/* notes space
-
-when the wires are connected we need to store those connections.. somewhere. and link it to the wires so when they get cut or something things happen or something like that i guess
-
-this script makes me want to EXPLODE
-
- */
-
+// wiring script for making the wires
+// interfaces with processor.js
 
 // global variables
-export var wiringMode;
-export var lastGivenID = 2; // ID SYSTEM is OBJECT - IO i.e. AND is "1", wirespots are "1-1" "1-2" "1-3". Increments when new objects are created
+window.wiring = {
+    wiringMode: undefined,
+}
+
+// script vairables
+let wiringMode = wiring.wiringMode;
 
 // initialise click zones (does not cover new objects fix later)
 var clickZones = document.getElementsByClassName("wire-clickzone");
 
 for (var i = 0; i < clickZones.length; i++) {
     clickZones[i].addEventListener('click', createWire, false);
+}
+
+function addClickZones(block) {
+    // check in block to find all the clickzones and then add them to clickZones variable
 }
 
 // wire creation
@@ -92,13 +94,3 @@ function appendWire(parent, oHead) {
         document.removeEventListener("click", finishWire);
     }
 }
-
-// there was once pythagoras theroem here :sob: but i deleted it :sob: because :sob: it was USELESS :sob:
-
-
-/*
-implenentation
-
-if id 1-3 connects with 2-2 then it creates a variable with
-
- */
