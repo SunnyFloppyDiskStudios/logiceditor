@@ -1,31 +1,32 @@
 // wiring script for making the wires
 // interfaces with processor.js
 
+console.log("wiring.js");
+
 // global variables
 window.wiring = {
     wiringMode: undefined,
 }
 
-// script vairables
-let wiringMode = wiring.wiringMode;
-
 // initialise click zones (does not cover new objects fix later)
-var clickZones = document.getElementsByClassName("wire-clickzone");
+let clickZones = document.getElementsByClassName("wire-clickzone");
 
-for (var i = 0; i < clickZones.length; i++) {
-    clickZones[i].addEventListener('click', createWire, false);
+function addClickZones() {
+    for (let i = 0; i < clickZones.length; i++) {
+        clickZones[i].removeEventListener('click', createWire, false);
+        clickZones = document.getElementsByClassName("wire-clickzone");
+        clickZones[i].addEventListener('click', createWire, false);
+    }
 }
 
-function addClickZones(block) {
-    // check in block to find all the clickzones and then add them to clickZones variable
-}
+addClickZones();
 
 // wire creation
 function createWire(e) {
-    if (e.target.classList.contains("wire-out") && !wiringMode) {
+    if (e.target.classList.contains("wire-out") && !wiring.wiringMode && !building.buildMode) {
         console.log(e.currentTarget);
 
-        wiringMode = true;
+        wiring.wiringMode = true;
 
         // initial wire
         const ogHead = document.createElement("div");
@@ -40,6 +41,9 @@ function createWire(e) {
 }
 
 function appendWire(parent, oHead) {
+
+    console.log(typeof parent)
+
     const nHead = document.createElement("div");
     nHead.className = "wire-head";
     parent.appendChild(nHead);
@@ -84,7 +88,10 @@ function appendWire(parent, oHead) {
         } else if (e.target.classList.contains("wire-in")) {
             // connect wire to input
             document.removeEventListener("pointermove", trackWire);
-            wiringMode = false;
+            wiring.wiringMode = false;
+
+            // add to logic.connections
+
         } else {
             // extende
             document.removeEventListener("pointermove", trackWire);

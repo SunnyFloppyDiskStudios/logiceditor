@@ -1,6 +1,8 @@
 // item function definitions
 // https://oaklandsrblxwiki.miraheze.org/wiki/Logic
 
+console.log("items.js");
+
 // Inputs
 
 function button() {
@@ -44,6 +46,20 @@ function weatherSensor() {
 }
 
 // Gates
+
+items.items_and_dom = (id) => `
+<div id="${id}" class="block items_and">
+    <img src="objects/items_and/items_and.png" alt="AND" draggable="false">
+    <div class="inputs">
+        <div id="${id}-1" class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
+        <div id="${id}-2" class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
+    </div>
+
+    <div class="outputs">
+        <div id="${id}-3" class="wire-clickzone wire-out" style="transform: translate(0px,0px)"></div>
+    </div>
+</div>
+`
 
 function andGate() {
     // "Activates an output of the two inputs when the two inputs are greater than 0.0 and are equal to each other"

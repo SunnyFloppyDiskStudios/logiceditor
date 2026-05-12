@@ -171,7 +171,7 @@ h1 a:hover {
     z-index: 9999;
     /*border-right: 5px solid white;*/
     backdrop-filter: blur(10px);
-    overflow-y: scroll
+    overflow-y: scroll;
 }
 
 .textbox {
@@ -217,10 +217,11 @@ h1 a:hover {
     color: white;
     font-family: Fredoka, sans-serif;
     flex-direction: column;
+    pointer-events: initial;
 }
 
 .item {
-    user-select: none;
+    /*user-select: none;*/
     width: 100%;
     height: 60px;
     /*background-color: var(--bpblue);*/
@@ -468,4 +469,8 @@ h1 a:hover {
 
     pointer-events: none;
     z-index: 45;
+}
+
+.sidebar-container {
+    pointer-events: none;
 }
