@@ -91,6 +91,7 @@ function appendWire(parent, oHead) {
             document.removeEventListener("pointermove", trackWire);
             wiring.wiringMode = false;
 
+            // anchor to input slot < !!!!!
             // add to logic.connections < !!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         } else {
