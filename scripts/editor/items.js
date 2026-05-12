@@ -69,7 +69,7 @@ function weatherSensor() {
 
 items.items_and_dom = (id) => `
 <div id="${id}" class="block items_and">
-    <img src="objects/items_and/items_and.png" alt="AND" draggable="false">
+    <img src="objects/items_and/items_and.png" alt="AND" class="udg">
     <div class="inputs">
         <div id="${id}-1" class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
         <div id="${id}-2" class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
