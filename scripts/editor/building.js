@@ -32,8 +32,12 @@ function buildNode(e) {
 
         document.addEventListener("pointermove", trackSpot)
         function trackSpot(e) {
+            // position
             node.style.transform = `translate(${e.clientX - 35 - nodeRect.x - 7}px, ${e.clientY - 35 - nodeRect.y - 17}px)`;
             node.style.pointerEvents = "none";
+
+            // rotation
+            // ADD ROTATION < !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         }
 
         setTimeout(() => { document.addEventListener('click', finishBuild, { once: true }); }, 0);
@@ -53,7 +57,7 @@ function buildNode(e) {
 
                 node.style.pointerEvents = "initial";
 
-                addClickZones(node);
+                addClickZones();
             }
 
             document.removeEventListener("click", finishBuild);

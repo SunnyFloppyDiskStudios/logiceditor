@@ -37,6 +37,7 @@ function createWire(e) {
 
         // when b or right click is pressed, undo a head and start re-editing the wire segment of the previous heda (until none and stop editing)
         // when escape is pressed delete the highestmost parent head and stop editing
+        // ADD ESCAPING < !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     }
 }
 
@@ -90,7 +91,7 @@ function appendWire(parent, oHead) {
             document.removeEventListener("pointermove", trackWire);
             wiring.wiringMode = false;
 
-            // add to logic.connections
+            // add to logic.connections < !!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         } else {
             // extende
