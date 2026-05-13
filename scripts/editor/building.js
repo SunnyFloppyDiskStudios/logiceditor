@@ -30,7 +30,8 @@ function buildNode(e) {
 
         const nodeRect = node.getBoundingClientRect();
 
-        document.addEventListener("pointermove", trackSpot)
+        document.addEventListener("pointermove", trackSpot);
+        trackSpot(e);
         function trackSpot(e) {
             // position
             node.style.transform = `translate(${e.clientX - 35 - nodeRect.x - 7}px, ${e.clientY - 35 - nodeRect.y - 17}px)`;
