@@ -52,7 +52,7 @@ function appendWire(parent, oHead, slot) {
     const nWire = document.createElement("div");
     nWire.className = "wire-segment";
     oHead.appendChild(nWire);
-    
+
     document.addEventListener("pointermove", trackWire);
     function trackWire(e) {
         nHead.style.pointerEvents = "none";

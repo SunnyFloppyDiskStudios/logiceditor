@@ -233,6 +233,8 @@ h1 a:hover {
 
 .item img {
     height: 60px;
+    max-width: 60px;
+    object-fit: scale-down;
 }
 
 .item-img-container {
@@ -378,7 +380,12 @@ h1 a:hover {
 }
 
 .block img {
-    max-block-size: 100px;
+    /*max-block-size: 100px;*/
+
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: scale-down;
+
     display: block;
 }
 

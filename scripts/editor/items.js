@@ -65,7 +65,14 @@ function weatherSensor() {
     // "Outputs a signal [1,6]. 1 for sunny, 2 for cloudy, 3 for rain, 4 for thunderstorm, 5 for aurora borealis, and 6 for the rare falling star event."
 }
 
-items.items_numberInterface_dom = (id) => ``
+items.items_numberInterface_dom = (id) => `
+<div id="${id}" class="block items_numberInterface">
+    <img src="objects/items_numberInterface/items_numberInterface.png" alt="Number Interface" class="udg">
+    <div class="outputs">
+        <div id="${id}-3" class="wire-clickzone wire-out wire-interaction" style="transform: translate(0px,0px)" data-stored="0"></div>
+    </div>
+</div>
+`
 
 function numberInterface() {
 
