@@ -66,10 +66,13 @@ function weatherSensor() {
 }
 
 items.items_numberInterface_dom = (id) => `
-<div id="${id}" class="block items_numberInterface">
-    <img src="objects/items_numberInterface/items_numberInterface.png" alt="Number Interface" class="udg">
+<div id="${id}" class="block items_numberInterface interactable">
+    <img src="objects/items_numberInterface/items_numberInterface.png" alt="AND" class="udg" style="max-block-size: 75px;">
+
+<!--    <p class="udg interfaceInput" style="font-size: 30px; font-weight: bold">> SCHEMA NAME <</p>-->
+
     <div class="outputs">
-        <div id="${id}-3" class="wire-clickzone wire-out wire-interaction" style="transform: translate(0px,0px)" data-stored="0"></div>
+        <div id="${id}-0" class="wire-clickzone wire-out wire-interaction" style="transform: translate(0px,0px)" data-stored="0"></div>
     </div>
 </div>
 `
