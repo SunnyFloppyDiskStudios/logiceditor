@@ -65,6 +65,12 @@ function weatherSensor() {
     // "Outputs a signal [1,6]. 1 for sunny, 2 for cloudy, 3 for rain, 4 for thunderstorm, 5 for aurora borealis, and 6 for the rare falling star event."
 }
 
+items.items_numberInterface_dom = (id) => ``
+
+function numberInterface() {
+
+}
+
 // Gates
 
 items.items_and_dom = (id) => `
@@ -247,7 +253,7 @@ function redLaser() {
     // "Outputs a signal of 10.0 if it hits an object, a signal of 5.0 if it hits a player. Reflects off of privacy glass up to 5 times."
 }
 
-items.items_matLaser_dom = (id) => ``
+items.items_materialLaser_dom = (id) => ``
 
 function materialLaser() {
     // "Assign a material to the laser by touching the material onto the schematic input. When the laser hits a material, it will output a signal of 10.0"
@@ -297,25 +303,25 @@ function lcd() {
     // "A resizeable array of toggleable lights with logic. When input numbers surpass 10.0, the colors of the rainbow start to appear."
 }
 
-items.items_bpLights_dom = (id) => ``
+items.items_bulbPoweredLights_dom = (id) => ``
 
 function bulbPoweredLights() {
     // "A resizeable array of toggleable lights with logic. When input numbers surpass 10.0, the colors of the rainbow start to appear."
 }
 
-items.items_eBillboard_dom = (id) => ``
+items.items_electronicBillboard_dom = (id) => ``
 
 function electronicBillboard() {
     // "Displays an image depending on what the input signal is. The signal input has to be a Roblox Image ID. An easy way to input this number is with a number interface."
 }
 
-items.items_sevenSegDisplay_dom = (id) => ``
+items.items_sevenSegmentDisplay_dom = (id) => ``
 
 function sevenSegmentDisplay() {
     // "Allows you to display numbers. Bottom middle input allows you to provide a number input to display. Bottom left input allows you to provide a color. Top middle input is a passthrough for the number input. Optionally, you can individually activate every segment."
 }
 
-items.items_fourteenSegDisplay_dom = (id) => ``
+items.items_fourteenSegmentDisplay_dom = (id) => ``
 
 function fourteenSegmentDisplay() {
     // "Allows you to display numbers. Bottom middle input allows you to provide a number input to display. Bottom left input allows you to provide a color. Top middle input is a passthrough for the number input. Optionally, you can individually activate every segment."
@@ -327,7 +333,7 @@ function musicNote() {
     // "Plays different notes depending on the input signal. Can change music type by interacting."
 }
 
-items.items_secCamDisplay_dom = (id) => ``
+items.items_securityCameraDisplay_dom = (id) => ``
 
 function securityCameraDisplay() {
     // "A display made for rendering cameras! Must be toggled on by the user."
