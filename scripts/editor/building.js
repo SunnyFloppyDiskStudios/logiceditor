@@ -3,7 +3,7 @@ console.log("building.js");
 
 // vars
 window.building = {
-    lastGivenID: 2, // ID SYSTEM is OBJECT - IO i.e. AND is "1", wirespots are "1-1" "1-2" "1-3". Increments when new objects are created
+    lastGivenID: 0, // ID SYSTEM is OBJECT - IO i.e. AND is "1", wirespots are "1-1" "1-2" "1-3". Increments when new objects are created
     buildMode: false
 }
 

@@ -41,7 +41,7 @@ function createWire(e) {
     }
 }
 
-function appendWire(parent, oHead) {
+function appendWire(parent, oHead, slot) {
 
     console.log(typeof parent)
 
@@ -52,17 +52,21 @@ function appendWire(parent, oHead) {
     const nWire = document.createElement("div");
     nWire.className = "wire-segment";
     oHead.appendChild(nWire);
-
+    
     document.addEventListener("pointermove", trackWire);
-
-    const gate = document.getElementById(parent.id.toString().split("-")[0]);
-    const gateRect = gate.getBoundingClientRect();
-
     function trackWire(e) {
         nHead.style.pointerEvents = "none";
 
         // cursor - canvas - gate - offset
-        nHead.style.transform = `translate(${e.clientX - 35 - gateRect.x - 47}px, ${e.clientY - 35 - gateRect.y - 17}px)`;
+        const parentRect = parent.getBoundingClientRect();
+
+        const tx =
+            e.clientX - parentRect.left - (nHead.offsetWidth / 2) - 13;
+
+        const ty =
+            e.clientY - parentRect.top - (nHead.offsetHeight / 2) - 13;
+
+        nHead.style.transform = `translate(${tx}px, ${ty}px)`;
 
         // wire
         const oHeadRect = oHead.getBoundingClientRect();
