@@ -1,7 +1,6 @@
-// wiring script for making the wires
-// interfaces with processor.js
-
 console.log("wiring.js");
+
+// wiring script for making the wires
 
 // global variables
 window.wiring = {

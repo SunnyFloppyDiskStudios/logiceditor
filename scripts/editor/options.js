@@ -1,3 +1,5 @@
+console.log("options.js")
+
 // settings
 
 window.options = {

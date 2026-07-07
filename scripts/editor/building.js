@@ -13,29 +13,29 @@ const canvas = document.getElementById("canvas");
 const items = document.getElementsByClassName("item");
 
 for (let i = 0; i < items.length; i++) {
-    items[i].addEventListener('click', buildNode, false);
+    items[i].addEventListener('click', buildMachine, false);
 }
 
 // building
-function buildNode(e) {
+function buildMachine(e) {
     if (!wiring.wiringMode && !building.buildMode) {
         const i = e.currentTarget.id;
         console.log(i);
 
         building.lastGivenID++;
         
-        const node = document.createElement("div");
-        node.innerHTML = items[`${i}_dom`](building.lastGivenID);
-        canvas.appendChild(node);
+        const machine = document.createElement("div");
+        machine.innerHTML = items[`${i}_dom`](building.lastGivenID);
+        canvas.appendChild(machine);
 
-        const nodeRect = node.getBoundingClientRect();
+        const machineRect = machine.getBoundingClientRect();
 
         document.addEventListener("pointermove", trackSpot);
         trackSpot(e);
         function trackSpot(e) {
             // position
-            node.style.transform = `translate(${e.clientX - 35 - nodeRect.x - 7}px, ${e.clientY - 35 - nodeRect.y - 17}px)`;
-            node.style.pointerEvents = "none";
+            machine.style.transform = `translate(${e.clientX - 35 - machineRect.x - 7}px, ${e.clientY - 35 - machineRect.y - 17}px)`;
+            machine.style.pointerEvents = "none";
 
             // rotation
             // ADD ROTATION < !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -43,20 +43,20 @@ function buildNode(e) {
 
         setTimeout(() => { document.addEventListener('click', finishBuild, { once: true }); }, 0);
         function finishBuild(e) {
-            if (e.target.classList.contains("block")) {
+            if (e.target.parentElement.classList.contains("block") || e.target.classList.contains("wire-clickzone")) {
                 // do nothing! (unironically does something)
                 setTimeout(() => { document.addEventListener('click', finishBuild, { once: true }); }, 0);
-            } else if (e.target.classList.contains("sidebar") || e.target.classList.contains("item")) {
+            } else if (e.target.classList.contains("sidebar") || e.target.classList.contains("item") || e.target.parentElement.classList.contains("items-search")) {
                 // destroy
                 document.removeEventListener("pointermove", trackSpot);
-                node.remove();
+                machine.remove();
                 building.buildMode = false;
             } else {
                 // place block
                 document.removeEventListener("pointermove", trackSpot);
                 building.buildMode = false;
 
-                node.style.pointerEvents = "initial";
+                machine.style.pointerEvents = "initial";
 
                 addClickZones();
             }

@@ -1,3 +1,7 @@
+console.log("interface.js");
+
+// script for certain UI elements
+
 // date UI
 const dateText = document.getElementById("ui_dateTimeUI");
 
@@ -24,6 +28,10 @@ setInterval(updateTimeText, 3000);
 const nameText = document.getElementById("ui_schemaName");
 
 nameText.addEventListener("click", () => {
+    if (nameText.innerText === "> SCHEMA NAME <") {
+        nameText.innerText = "";
+    }
+
     nameText.setAttribute("contenteditable", "true");
     nameText.focus();
 });
@@ -35,3 +43,9 @@ nameText.addEventListener("keydown", (e) => {
         nameText.blur();
     }
 });
+
+nameText.addEventListener("focusout", (e) => {
+    if (nameText.innerText.trim() === "") {
+        nameText.innerText = "> SCHEMA NAME <";
+    }
+})

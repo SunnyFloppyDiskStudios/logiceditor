@@ -1,7 +1,7 @@
+console.log("items.js");
+
 // item function definitions
 // https://oaklandsrblxwiki.miraheze.org/wiki/Logic
-
-console.log("items.js");
 
 // Inputs
 
