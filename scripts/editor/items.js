@@ -348,3 +348,15 @@ items.items_securityCameraDisplay_dom = (id) => ``
 function securityCameraDisplay() {
     // "A display made for rendering cameras! Must be toggled on by the user."
 }
+
+items.items_atmosphereController_dom = (id) => ``
+
+function atmosphereController() {
+    // "Allows you to change the Atmosphere's properties on your plot. From left to right, inputs 1-3 correspond to Red, Green and Blue RGB values (0-255). Input 4,5 and 6 correspond to Density(0-1), Glare(0-10) and Haze(0-10)."
+}
+
+items.items_hsvToRgbConverter_dom = (id) => ``
+
+function hsvToRgbConverter() {
+    // "Takes in logic value of H[0,360], S[0,100], V[0,100] (representing Hue, Saturation, and Value) and outputs converted values of R,G,B [0, 255] for the RGB color space. Best applicable for the Atmosphere Controller"
+}
