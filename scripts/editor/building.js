@@ -19,6 +19,8 @@ for (let i = 0; i < items.length; i++) {
 // building
 function buildMachine(e) {
     if (!wiring.wiringMode && !building.buildMode) {
+        let rotation = 0;
+
         const i = e.currentTarget.id;
         console.log(i);
 
@@ -29,16 +31,23 @@ function buildMachine(e) {
         canvas.appendChild(machine);
 
         const machineRect = machine.getBoundingClientRect();
+        const canvasRect = canvas.getBoundingClientRect();
 
         document.addEventListener("pointermove", trackSpot);
         trackSpot(e);
         function trackSpot(e) {
             // position
-            machine.style.transform = `translate(${e.clientX - 35 - machineRect.x - 7}px, ${e.clientY - 35 - machineRect.y - 17}px)`;
+            machine.style.transform = `translate(${e.clientX - canvasRect.left - machineRect.x}px, ${e.clientY - canvasRect.top - machineRect.y}px)`;
             machine.style.pointerEvents = "none";
+        }
 
-            // rotation
-            // ADD ROTATION < !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // rotation
+        document.addEventListener("keydown", rotateObject)
+        function rotateObject(e) {
+            if (e.key === "r") {
+                rotation = (rotation + 90) % 360;
+                machine.style.rotate = `${rotation}deg`;
+            }
         }
 
         setTimeout(() => { document.addEventListener('click', finishBuild, { once: true }); }, 0);
@@ -49,16 +58,19 @@ function buildMachine(e) {
             } else if (e.target.classList.contains("sidebar") || e.target.classList.contains("item") || e.target.parentElement.classList.contains("items-search")) {
                 // destroy
                 document.removeEventListener("pointermove", trackSpot);
+                document.removeEventListener("keydown", rotateObject);
                 machine.remove();
                 building.buildMode = false;
             } else {
                 // place block
                 document.removeEventListener("pointermove", trackSpot);
+                document.removeEventListener("keydown", rotateObject);
                 building.buildMode = false;
 
                 machine.style.pointerEvents = "initial";
 
                 addClickZones();
+                addMachine(i, machine);
             }
 
             document.removeEventListener("click", finishBuild);

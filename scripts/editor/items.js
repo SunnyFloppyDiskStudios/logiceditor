@@ -72,12 +72,12 @@ items.items_numberInterface_dom = (id) => `
 <!--    <p class="udg interfaceInput" style="font-size: 30px; font-weight: bold">> SCHEMA NAME <</p>-->
 
     <div class="outputs">
-        <div id="${id}-0" class="wire-clickzone wire-out wire-interaction" style="transform: translate(0px,0px)" data-stored="0"></div>
+        <div id="${id}-0" class="wire-clickzone wire-out wire-interaction" style="transform: translate(0px,0px)" data-stored-value="x"></div>
     </div>
 </div>
 `
 
-function numberInterface() {
+function numberInterface(field1, out1) {
 
 }
 
@@ -87,47 +87,47 @@ items.items_and_dom = (id) => `
 <div id="${id}" class="block items_and">
     <img src="objects/items_and/items_and.png" alt="AND" class="udg">
     <div class="inputs">
-        <div id="${id}-1" class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
-        <div id="${id}-2" class="wire-clickzone wire-in" style="transform: translate(0px,0px)"></div>
+        <div id="${id}-1" class="wire-clickzone wire-in" style="transform: translate(0px,0px)" data-linked-wiring-parent="x"></div>
+        <div id="${id}-2" class="wire-clickzone wire-in" style="transform: translate(0px,0px)" data-linked-wiring-parent="x"></div>
     </div>
 
     <div class="outputs">
-        <div id="${id}-3" class="wire-clickzone wire-out" style="transform: translate(0px,0px)"></div>
+        <div id="${id}-3" class="wire-clickzone wire-out" style="transform: translate(0px,0px)" data-stored-value="0"></div>
     </div>
 </div>
 `
 
-function andGate() {
+function and(inp1, inp2, out1) {
     // "Activates an output of the two inputs when the two inputs are greater than 0.0 and are equal to each other"
 }
 
 items.items_not_dom = (id) => ``
 
-function notGate() {
+function not() {
     // "Activates an output of 0.0 when the input is greater than 0.0, otherwise it will output 10.0."
 }
 
 items.items_or_dom = (id) => ``
 
-function orGate() {
+function or() {
     // "Activates the highest output of the two inputs."
 }
 
 items.items_xor_dom = (id) => ``
 
-function xorGate() {
+function xor() {
     // "Outputs the binary equivalent of an XOR operation on each bit. Since every input is 10.0, a normal XOR binary truth table will work."
 }
 
 items.items_xand_dom = (id) => ``
 
-function xandGate() {
+function xand() {
     // "Similar to the AND gate, however, it will output 10.0 when both inputs are equal to 0.0"
 }
 
 items.items_greaterThan_dom = (id) => ``
 
-function greaterThanGate() {
+function greaterThan() {
     // "Will output the left signal if the left signal is greater than the right signal."
 }
 
