@@ -78,3 +78,8 @@ function buildMachine(e) {
     }
 }
 
+// 10k x 10k canvas size
+// clipping mask to revela canvas
+// canvas is pannable
+
+// wiring gets its own parent instead of being parented to the machine. teh wire head positions get calculated or whatever. idk.

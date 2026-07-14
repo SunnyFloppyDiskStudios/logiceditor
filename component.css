@@ -1,0 +1,112 @@
+/* MACHINES */
+
+.block {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    display: block;
+
+    top:0;
+    left: 0;
+
+    width: fit-content;
+    height: fit-content;
+
+    z-index: 10;
+}
+
+.block img {
+    max-width: 100px;
+    max-height: 100px;
+
+    object-fit: scale-down;
+
+    display: block;
+}
+
+.inputs {
+    top: 0;
+    left: -10px;
+
+    position: absolute;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.outputs {
+    top: 0;
+    right: -10px;
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.wire-clickzone {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    transition: background-color 0.3s var(--curve);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 11;
+}
+
+.wire-clickzone:hover {
+    background-color: var(--transparent);
+    transition: background-color 0.3s var(--curve);
+}
+
+
+/* WIRES */
+
+.wire-head {
+    width: 6px;
+    height: 6px;
+    position: absolute;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+
+    /*background-color: #fff;*/
+
+    z-index: 50;
+}
+
+.wire-segment {
+    /*width: 100px;*/
+    height: 6px;
+
+    flex-shrink: 0;
+    display: flex;
+
+    background-color: var(--wred);
+    background-image: url("assets/images/editor/stripe2.png");
+    background-size: 2em;
+
+    /*outline: 1px solid var(--darktransparent);*/
+    border-radius: 10px;
+    transform-origin: 3px 50%;
+
+    align-items: center;
+    justify-content: end;
+
+    /*transform: rotate(45deg);*/
+
+    pointer-events: none;
+    z-index: 45;
+}
