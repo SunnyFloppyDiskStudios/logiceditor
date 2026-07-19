@@ -249,8 +249,8 @@ h1 a:hover {
 }
 
 #canvas {
-    width: 10005px;
-    height: 10005px;
+    width: 10000px;
+    height: 10000px;
 
     border: 5px solid var(--bpblue);
 
