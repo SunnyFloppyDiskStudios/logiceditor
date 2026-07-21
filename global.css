@@ -249,7 +249,7 @@ h1 a:hover {
     height: 10000px;
 
     position: relative;
-    /*overflow: hidden;*/
+    overflow: hidden;
     background-color: var(--bpblue);
 }
 

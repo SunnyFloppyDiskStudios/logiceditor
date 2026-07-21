@@ -18,6 +18,7 @@ for (let i = 0; i < items.length; i++) {
 
 // preload
 window.addEventListener("load", () => {
+    history.scrollRestoration = "manual";
     window.scrollTo(document.documentElement.scrollWidth / 2, document.documentElement.scrollHeight / 2);
 })
 
