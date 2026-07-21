@@ -16,6 +16,12 @@ for (let i = 0; i < items.length; i++) {
     items[i].addEventListener('click', buildMachine, false);
 }
 
+// preload
+window.addEventListener("load", () => {
+    window.scrollTo(document.documentElement.scrollWidth / 2, document.documentElement.scrollHeight / 2);
+})
+
+
 // building
 function buildMachine(e) {
     if (!wiring.wiringMode && !building.buildMode) {

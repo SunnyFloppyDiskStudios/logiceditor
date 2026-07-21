@@ -60,7 +60,11 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
+
+    width: fit-content;
+    height: fit-content;
+
+
     display: flex;
     flex-direction: column;
     /*background-color: var(--bpblue);*/
@@ -74,7 +78,7 @@ html {
     max-height: 100%;
     max-width: 100%;
 
-    background-color: black;
+    background-color: white;
 
     scrollbar-width: none;
 }
@@ -84,15 +88,16 @@ html, body {
 }
 
 .page-wrapper {
-    flex: 1;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 10010px;
+    height: 10010px;
 }
 
 .content {
-    flex: 1;
     margin-left: 50px;
 }
 
@@ -146,15 +151,6 @@ h1 a {
 
 h1 a:hover {
     transform: scale(1.1);
-}
-
-.page-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
 }
 
 .sidebar {
@@ -252,10 +248,8 @@ h1 a:hover {
     width: 10000px;
     height: 10000px;
 
-    border: 5px solid var(--bpblue);
-
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
     background-color: var(--bpblue);
 }
 
